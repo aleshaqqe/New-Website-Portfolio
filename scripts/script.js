@@ -21,7 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.unobserve(entry.target);
       }
     });
-  }, { threshold: 0.6 });
+  }, { threshold: 0.3 });
 
   // Наблюдаем за каждым контейнером
   containers.forEach(container => observer.observe(container));
