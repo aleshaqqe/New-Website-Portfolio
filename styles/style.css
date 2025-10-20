@@ -1,0 +1,312 @@
+@charset "UTF-8";
+@import 'nullstyle.css';
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+/*Функция для перевода пикс.-> рэмы-*/
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+@keyframes flicker {
+  0%, 100% {
+    text-shadow: 0 0 2px #ffffff, 0 0 4px white, 0 0 6px white;
+  }
+  50% {
+    text-shadow: 0 0 1px white, 0 0 2px white;
+  }
+}
+.container {
+  padding-top: 1.25rem;
+  padding-bottom: 1.875rem;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+.header {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.header .header__menu-list {
+  display: flex;
+  gap: 3.75rem;
+}
+.header .header__menu-list li a {
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff;
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: white;
+  text-decoration: none;
+  transition: all 0.5s ease-in-out;
+}
+.header .header__menu-list li a:hover {
+  color: #00aeef;
+  text-shadow: 0 0 10px #00aeef, 0 0 20px #00aeef;
+}
+.header {
+  background-color: #3b3d3c;
+}
+.header .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9.375rem;
+}
+
+.about .container {
+  padding-top: 40px;
+  padding-bottom: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 9.375rem;
+  padding-left: 10.3125rem;
+}
+.about {
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.about .about__block-1 {
+  width: 49.9999%;
+}
+.about .about__title {
+  font-size: 3rem;
+  text-shadow: 0 0 2.5px white, 0 0 2.5px white, 0 0 2.5px white, 0 0 2.5px white;
+}
+.about .about__subtitle {
+  font-size: 1.875rem;
+  margin-top: 0.3125rem;
+  color: #fff;
+  text-shadow: 0 0 2px #00aeef, 0 0 3px #00aeef;
+  animation: flicker 5s infinite ease-in-out;
+}
+.about .about__nickname {
+  color: #00AEEF;
+  text-shadow: 0 0 2px #00AEEF, 0 0 2px #00AEEF, 0 0 2px #00AEEF, 0 0 2px #00AEEF;
+}
+.about .about__desc {
+  margin-top: 1.25rem;
+  color: #e0e0e0;
+  text-shadow: 0 0 1px #00aeef, 0 0 2px #00aeef;
+  animation: flicker 6s infinite ease-in-out;
+}
+
+main {
+  background-color: #2d2e2d;
+}
+
+.projects {
+  background-color: #343634;
+}
+.projects img {
+  margin-top: 1.25rem;
+}
+.projects {
+  color: white;
+}
+.projects .container {
+  padding-top: 3.125rem;
+  padding-left: 10.3125rem;
+  padding-bottom: 3.75rem;
+}
+.projects__title {
+  text-align: center;
+}
+.projects .projects__cards {
+  margin-top: 1.875rem;
+  display: flex;
+  justify-content: center;
+  gap: 4.375rem;
+}
+.projects .projects__cards .projects__card {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  margin-top: 1.25rem;
+  border-radius: 12px;
+  text-align: center;
+  background-color: #464a47;
+  padding: 20px 20px 20px 20px;
+}
+.projects .projects__card-title {
+  font-size: 1.875rem;
+  font-weight: 700;
+  text-align: center;
+}
+.projects .projects__card-title .project__logo {
+  display: inline;
+  margin: 0 auto;
+}
+.projects .projects__card-link {
+  color: white;
+}
+.projects .projects__img {
+  border-radius: 5px;
+}
+.projects .project__github-item {
+  margin-top: 3.125rem;
+  font-size: 1.5625rem;
+  font-weight: 600;
+}
+.projects .project__github-item a {
+  color: #00AEEF;
+}
+
+.projects__icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.875rem;
+}
+
+.skills .container {
+  padding-top: 6.25rem;
+  padding-left: 10.3125rem;
+  padding-bottom: 6.25rem;
+}
+.skills .container .skills__item {
+  font-size: 1.25rem;
+}
+.skills .container .skills__title {
+  color: white;
+  text-align: center;
+}
+.skills .container .skills__count {
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  background-color: #2b2b28;
+  margin: 0 auto;
+  padding: 30px;
+  border-radius: 15px;
+  margin-top: 3.125rem;
+  display: flex;
+  justify-content: center;
+  gap: 3.125rem;
+  overflow: hidden;
+  width: 60%;
+}
+.skills .container .skills__bar {
+  box-shadow: 0 0 5px #00d9ff, 0 0 10px #00d9ff, 0 0 20px #00d9ff, 0 0 30px #00d9ff;
+  margin-bottom: 1.25rem;
+  height: 10px; /* высота полоски */
+  width: 0; /* начальная ширина (для анимации) */
+  background-color: #00d9ff; /* цвет заполнения */
+  border-radius: 10px;
+  transition: width 1s ease-in-out;
+}
+.skills .container .skills__block {
+  width: 49.999%;
+}
+.skills .container .skills__item {
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: white;
+}
+
+.neon {
+  text-shadow: 0 0 5px #9fd1ca, 0 0 10px #9fd1ca, 0 0 20px #9fd1ca, 0 0 40px #9fd1ca;
+}
+
+.footer {
+  background-color: #3b3d3c;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+}
+.footer .container {
+  padding-left: 10.3125rem;
+  text-align: center;
+  color: white;
+}
+
+.container {
+  padding-right: 10.25rem;
+} /* ✨ Плавное появление контейнеров при скролле */
+.container {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Когда контейнер появляется */
+.container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* ✨ Тимчасова адаптація для мобільних екранів */
+@media (max-width: 1024px) {
+  .header .container {
+    flex-direction: column;
+    gap: 1.25rem;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .header__menu-list {
+    flex-direction: column;
+    gap: 0.9375rem;
+    align-items: center;
+  }
+  .about .container {
+    flex-direction: column;
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+    gap: 1.875rem;
+  }
+  .projects .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .projects__cards {
+    flex-direction: column;
+    gap: 1.875rem;
+  }
+  .projects__cards img {
+    margin: 0 auto;
+  }
+  .skills .container {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+  .skills__count {
+    flex-direction: column;
+    width: 90%;
+    gap: 1.25rem;
+  }
+  .skills__block {
+    width: 100vw;
+  }
+  .skills__bar {
+    width: 100%;
+  }
+}
+/* ✨ Тимчасова адаптація для маленьких мобільних екранів */
+@media (max-width: 600px) {
+  .about__title {
+    font-size: 2rem;
+  }
+  .about__subtitle {
+    font-size: 1.25rem;
+  }
+  .projects__card-title {
+    font-size: 1.5rem;
+  }
+  .skills__item {
+    font-size: 1rem;
+  }
+}
+.neon-text {
+  color: #aaffff; /* цвет текста */
+  font-size: 3rem;
+  text-shadow: 0 0 2px #aaffff; /* едва заметное свечение */
+  transition: all 0.5s;
+}
+
+/* Лёгкая анимация свечения */
+.neon-text:hover {
+  text-shadow: 0 0 10px #aaffff, 0 0 20px #aaffff;
+}
+
+.social__link:hover {
+  color: white;
+}
+
+/*# sourceMappingURL=style.css.map */

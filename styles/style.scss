@@ -1,0 +1,365 @@
+@use "sass:math";
+
+
+@import 'nullstyle.css';
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Taviraj:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/*Функция для перевода пикс.-> рэмы-*/
+@function rem($pixel){
+  @if  math.is-unitless($pixel){
+    @return math.div($pixel,16) + rem;
+  }@else{
+    @error 'Error';
+  }
+}
+html{
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+}
+@keyframes flicker {
+  0%, 100% {
+    text-shadow:
+      0 0 2px #ffffff,
+      0 0 4px #ffff,
+      0 0 6px #ffff;
+  }
+  50% {
+    text-shadow:
+      0 0 1px #ffff,
+      0 0 2px #ffff;
+  }
+}
+.container{
+  padding-top:rem(20);
+  padding-bottom:rem(30);
+
+  max-width:1440px;
+  margin:0 auto;
+}
+.header{
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+
+  .header__menu-list{
+    display:flex;
+    gap:rem(60);
+    li{
+
+      a{
+        text-shadow:
+          0 0 10px #fff,
+          0 0 20px #fff;
+        font-size: rem(18);
+        font-weight: 400;
+        color:white;
+        text-decoration:none;
+        transition:all .5s ease-in-out;
+      }
+      a:hover{
+        color:#00aeef;
+        text-shadow:
+          0 0 10px #00aeef,
+          0 0 20px #00aeef;
+      }
+    }
+  }
+  background-color:#3b3d3c;
+  .container{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap:rem(150);
+  }
+}
+.about {
+
+  .container{
+    padding-top:40px;
+    padding-bottom:100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: rem(150);
+    padding-left: rem(165);
+
+    }
+
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .about__block-1 {
+    width: 49.9999%
+  }
+
+  .about__title {
+    font-size: rem(48);
+    text-shadow: 0 0 2.5px #ffff,
+    0 0 2.5px #ffff,
+    0 0 2.5px #ffff,
+    0 0 2.5px #ffff;
+  }
+
+  .about__subtitle {
+    font-size: rem(30);
+    margin-top: rem(5);
+    color: #fff;
+    text-shadow:
+      0 0 2px #00aeef,
+      0 0 3px #00aeef;
+    animation: flicker 5s infinite ease-in-out;
+  }
+
+  .about__nickname {
+    color: #00AEEF;
+    text-shadow: 0 0 2px #00AEEF,
+    0 0 2px #00AEEF,
+    0 0 2px #00AEEF,
+    0 0 2px #00AEEF;
+  }
+
+  .about__desc {
+    margin-top: rem(20);
+    color: #e0e0e0;
+    text-shadow:
+      0 0 1px #00aeef,
+      0 0 2px #00aeef;
+    animation: flicker 6s infinite ease-in-out;
+
+  }
+}
+main{
+  background-color:#2d2e2d;
+
+}
+.projects{
+  background-color:#343634;
+  img{
+    margin-top:rem(20);
+
+  }
+  color:white;
+  .container{
+    padding-top:rem(50);
+    padding-left: rem(165);
+    padding-bottom:rem(60);
+  }
+  &__title{
+    text-align: center;
+  }
+  .projects__cards{
+    margin-top:rem(30);
+    display:flex;
+    justify-content: center;
+    gap:rem(70);
+    .projects__card{
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+      margin-top:rem(20);
+      border-radius: 12px;
+      text-align: center;
+      background-color:#464a47;
+      padding:20px 20px 20px 20px;
+    }
+  }
+  .projects__card-title{
+    font-size: rem(30);
+    font-weight: 700;
+    text-align: center;
+    .project__logo{
+      display:inline;
+      margin:0 auto;
+    }
+  }
+  .projects__card-link{
+    color:white;
+  }
+  .projects__img{
+    border-radius:5px;
+  }
+  .project__github-item{
+    margin-top:rem(50);
+    font-size: rem(25);
+
+    font-weight: 600;
+    a{
+      color:#00AEEF;
+    }
+
+  }
+}
+.projects__icons{
+  display:flex;
+  justify-content: center;
+  gap:rem(30);
+}
+.skills{
+  .container{
+    padding-top:rem(100);
+    padding-left: rem(165);
+    padding-bottom:rem(100);
+    .skills__item{
+      font-size: rem(20);
+    }
+    .skills__title{
+      color:white;
+      text-align:center;
+    }
+    .skills__count{
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+
+      background-color:#2b2b28;
+      margin:0 auto;
+      padding:30px;
+      border-radius:15px;
+      margin-top: rem(50);
+      display: flex;
+      justify-content:center;
+      gap:rem(50);
+      overflow: hidden;
+      width:60%;
+    }
+    .skills__bar {
+      box-shadow:
+        0 0 5px #00d9ff,
+        0 0 10px #00d9ff,
+        0 0 20px #00d9ff,
+        0 0 30px #00d9ff;
+      margin-bottom:rem(20);
+      height: 10px;                 /* высота полоски */
+      width: 0;                     /* начальная ширина (для анимации) */
+      background-color: #00d9ff;    /* цвет заполнения */
+      border-radius: 10px;
+      transition: width 1s ease-in-out;
+    }
+    .skills__block{
+      width:49.999%;
+    }
+    .skills__item {
+      margin-bottom: 5px;
+      font-weight: 600;
+      color: white;
+    }
+  }
+}
+.neon{
+  text-shadow:
+    0 0 5px #9fd1ca,
+    0 0 10px #9fd1ca,
+    0 0 20px #9fd1ca,
+    0 0 40px #9fd1ca;
+}
+.footer{
+  background-color:#3b3d3c;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  .container{
+    padding-left: rem(165);
+
+    text-align:center;
+    color:white
+  }
+}
+.container{
+  padding-right:rem(164);
+}/* ✨ Плавное появление контейнеров при скролле */
+.container {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* Когда контейнер появляется */
+.container.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+/* ✨ Тимчасова адаптація для мобільних екранів */
+@media (max-width: 1024px) {
+  .header .container {
+    flex-direction: column;
+    gap: rem(20);
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+
+  .header__menu-list {
+    flex-direction: column;
+    gap: rem(15);
+    align-items: center;
+  }
+
+  .about .container {
+    flex-direction: column;
+    padding-left: rem(20);
+    padding-right: rem(20);
+    gap: rem(30);
+  }
+
+  .projects .container {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+
+  .projects__cards {
+    flex-direction: column;
+    gap: rem(30);
+    img{
+      margin:0 auto;
+    }
+  }
+
+  .skills .container {
+    padding-left: rem(20);
+    padding-right: rem(20);
+  }
+
+  .skills__count {
+    flex-direction: column;
+    width: 90%;
+    gap: rem(20);
+  }
+
+  .skills__block {
+width:100vw; }
+  .skills__bar{
+    width:100%;
+  }
+}
+
+/* ✨ Тимчасова адаптація для маленьких мобільних екранів */
+@media (max-width: 600px) {
+  .about__title {
+    font-size: rem(32);
+  }
+
+  .about__subtitle {
+    font-size: rem(20);
+  }
+
+  .projects__card-title {
+    font-size: rem(24);
+  }
+
+  .skills__item {
+    font-size: rem(16);
+  }
+}
+.neon-text {
+  color: #aaffff; /* цвет текста */
+  font-size: 3rem;
+  text-shadow: 0 0 2px #aaffff; /* едва заметное свечение */
+  transition: all .5s;
+}
+
+/* Лёгкая анимация свечения */
+.neon-text:hover {
+  text-shadow:
+    0 0 10px #aaffff,
+    0 0 20px #aaffff;
+}
+
+.social__link:hover{
+  color:white;
+}
