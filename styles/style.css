@@ -309,4 +309,95 @@ main {
   color: white;
 }
 
+.background {
+  position: fixed; /* чтобы фон не двигался при скролле */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* 👈 ниже текста */
+  overflow: hidden;
+}
+
+/* Общий стиль фигур */
+.background div {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.8;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.about {
+  position: relative;
+  overflow: hidden;
+}
+
+.about .background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+}
+
+.about .background div {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(8px);
+  opacity: 0.8;
+  animation: float 10s infinite ease-in-out alternate;
+}
+
+.about .circle {
+  width: 120px;
+  height: 120px;
+  background: rgba(0, 255, 255, 0.5);
+  box-shadow: 0 0 40px 15px rgba(0, 255, 255, 0.5);
+  top: 20%;
+  left: 10%;
+  animation-delay: 0s;
+}
+
+.about .square {
+  width: 100px;
+  height: 100px;
+  background: rgba(255, 0, 255, 0.4);
+  box-shadow: 0 0 40px 15px rgba(255, 0, 255, 0.4);
+  top: 60%;
+  left: 70%;
+  border-radius: 10%;
+  animation-delay: 2s;
+}
+
+.about .triangle {
+  width: 0;
+  height: 0;
+  border-left: 60px solid transparent;
+  border-right: 60px solid transparent;
+  border-bottom: 100px solid rgba(255, 255, 0, 0.4);
+  filter: blur(6px);
+  box-shadow: 0 0 40px 15px rgba(255, 255, 0, 0.3);
+  top: 40%;
+  left: 40%;
+  animation-delay: 4s;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+  50% {
+    transform: translate(40px, -60px) scale(1.2);
+  }
+  100% {
+    transform: translate(-30px, 50px) scale(0.9);
+  }
+}
+.about .container {
+  position: relative;
+  z-index: 1;
+}
+
 /*# sourceMappingURL=style.css.map */
